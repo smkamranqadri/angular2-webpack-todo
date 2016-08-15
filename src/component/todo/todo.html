@@ -1,0 +1,10 @@
+<div class="panel" [class.panel-danger]="!todo.completed" [class.panel-primary]="todo.completed" (click)="toggle(todo.id)">
+    <div class="panel-body">
+      {{todo.task}}
+    </div>
+    <div class="panel-footer">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-danger" (click)="remove(todo.id)">Remove</button>
+      </span>
+    </div>
+</div>

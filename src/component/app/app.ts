@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  // template: '<h1>hello world</h1>'
-  template: require('./app.html')
+  selector: 'body',
+  template: require('./app.html'),
+  styles: [require('./app.scss')],
+  host: {
+    style: 'margin: 0px;',
+  },
+  encapsulation: ViewEncapsulation.Native
 })
 export class AppRoot {
   constructor() {}

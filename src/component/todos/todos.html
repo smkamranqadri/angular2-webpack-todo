@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+    <div class="panel-body">
+      <div class="input-group col-md-12">
+        <input type="text" class="form-control" #todo placeholder="Todo">
+      </div>
+    </div>
+    <div class="panel-footer">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-danger" (click)="add(todo.value)">Add</button>
+      </span>
+    </div>
+</div>
+<div *ngFor="let todo of todos">
+  <todo [todo]="todo"></todo>
+</div>
